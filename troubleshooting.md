@@ -23,9 +23,9 @@ SFMgraph::SFMgraph() {
         //typedef g2o::LinearSolverPCG<BlockSolver::PoseMatrixType> LinearSolver;
         LinearSolver* solver = new LinearSolver();
         //BlockSolver* blockSolver = new BlockSolver(solver);
-        BlockSolver* blockSolver = new BlockSolver(unique_ptr<BlockSolver::LinearSolverType>(solver)); // modified by XU Yang at 2019-09-10
+        BlockSolver* blockSolver = new BlockSolver(unique_ptr<BlockSolver::LinearSolverType>(solver)); // modified by Garry at 2019-09-10
         //g2o::OptimizationAlgorithmLevenberg* algorithm = new g2o::OptimizationAlgorithmLevenberg(blockSolver);
-        g2o::OptimizationAlgorithmLevenberg* algorithm = new g2o::OptimizationAlgorithmLevenberg(unique_ptr<BlockSolver>(blockSolver)); // modified by XU Yang at 2019-09-10
+        g2o::OptimizationAlgorithmLevenberg* algorithm = new g2o::OptimizationAlgorithmLevenberg(unique_ptr<BlockSolver>(blockSolver)); // modified by Garry at 2019-09-10
 
 
 2.Make warnings:comparison between signed and unsigned integer expressions [solved]
